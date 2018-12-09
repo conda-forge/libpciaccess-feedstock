@@ -12,6 +12,8 @@ source:
 build:
   skip: True  # [not linux]
   number: 1000
+  run_exports:
+    - {{ pin_subpackage('libpciaccess', max_pin='x.x') }}
 
 requirements:
   build:
@@ -21,7 +23,6 @@ requirements:
     - automake
     - pkg-config
   host:
-    # I had to install xutils-dev on ubuntu for this to work :/
     - xorg-util-macros
 
 test:
