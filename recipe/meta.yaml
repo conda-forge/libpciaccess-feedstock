@@ -11,7 +11,7 @@ source:
 
 build:
   skip: True  # [not linux]
-  number: 1000
+  number: 1001
   run_exports:
     - {{ pin_subpackage('libpciaccess', max_pin='x.x') }}
 
