@@ -1,5 +1,5 @@
 {% set name = "libpciaccess" %}
-{% set version = "0.15" %}
+{% set version = "0.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.freedesktop.org/xorg/lib/{{ name }}/-/archive/{{ name }}-{{ version }}/{{ name }}-{{ name }}-{{ version }}.tar.bz2
-  sha256: a29897dcbae7a653d5e429949f28822107987c5b958ebdb25b0628bf37a316ec
+  sha256: 9938b18509553452c6e13f79e16cbaffec9ea67119aa2de5d75e83c4f67ff400
 
 build:
   skip: True  # [not linux]
