@@ -22,6 +22,7 @@ requirements:
     - autoconf
     - automake
     - pkg-config
+    - make        # [unix]
   host:
     - xorg-util-macros
 
