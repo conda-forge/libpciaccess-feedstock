@@ -1,5 +1,5 @@
 {% set name = "libpciaccess" %}
-{% set version = "0.16" %}
+{% set version = "0.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://gitlab.freedesktop.org/xorg/lib/{{ name }}/-/archive/{{ name }}-{{ version }}/{{ name }}-{{ name }}-{{ version }}.tar.bz2
-  sha256: 9938b18509553452c6e13f79e16cbaffec9ea67119aa2de5d75e83c4f67ff400
+  sha256: 6e6d69d3cf5ee294dcb38ccfb360f1895a263df5dd8058563cdee62d9b9c17fd
 
 build:
-  skip: True  # [not linux]
+  skip: true  # [not linux]
   number: 0
   run_exports:
     - {{ pin_subpackage('libpciaccess', max_pin='x.x') }}
@@ -39,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: COPYING
-  summary: 'Generic PCI access library'
+  summary: Generic PCI access library
 
 extra:
   recipe-maintainers:
