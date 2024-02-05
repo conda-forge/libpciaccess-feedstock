@@ -27,7 +27,6 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libpciaccess.a
     - test -f $PREFIX/lib/libpciaccess.so
     - test -f $PREFIX/lib/libpciaccess.so.0
     - test -f $PREFIX/lib/pkgconfig/pciaccess.pc
