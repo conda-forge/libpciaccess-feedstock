@@ -1,5 +1,8 @@
 set -ex
-export ACLOCAL="aclocal -I ${PREFIX}/share/aclocal"
-autoreconf --install
-./autogen.sh --prefix=$PREFIX
-make install
+meson setup builddir \
+    ${MESON_ARGS} \
+    --buildtype=release \
+    --prefix=$PREFIX
+
+ninja -C builddir -j${CPU_COUNT}
+ninja -C builddir install
